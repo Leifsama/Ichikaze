@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "robot": {
+    "modules": {
+      "sonars": {
+          "driver": "sonars:Sonars",
+          "in": [],
+          "out": ["sonars", "pause"],
+          "init": {
+          }
+        }
+      },
+    "links": [
+    ]
+  }
+}
