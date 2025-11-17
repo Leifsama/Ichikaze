@@ -1,0 +1,11 @@
+
+
+# Ignore user settings file
+**/*.set
+
+
+# Ignore archives, as these shouldn't be in Git (if necessary, comment out these rules and place the archives in LFS)
+*.zip
+*.tar
+*.7z
+*.pyc
