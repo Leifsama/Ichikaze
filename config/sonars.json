@@ -2,15 +2,24 @@
   "version": 2,
   "robot": {
     "modules": {
+      "timer": {
+        "driver": "timer",
+        "in": [],
+        "out": ["tick"],
+        "init": {
+          "sleep": 0.1
+        }
+      },
       "sonars": {
           "driver": "sonars:Sonars",
-          "in": [],
+          "in": ["trigger"],
           "out": ["sonars", "pause"],
           "init": {
           }
         }
       },
     "links": [
+      ["timer.tick", "sonars.trigger"]
     ]
   }
 }
