@@ -26,7 +26,7 @@ class Sonars(Node):
     def on_trigger(self, data):
         distance1 = self.sensor1.distance
         distance2 = self.sensor2.distance
-        button_status = button.is_pressed
+        button_status = self.button.is_pressed
         self.publish('sonars', [distance1, distance2])  # could this be None as non defined?
         if self.prev_button_status != button_status:
             self.publish('pause', button_status)
