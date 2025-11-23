@@ -11,7 +11,7 @@
         }
       },
       "sonars": {
-          "driver": "osgar.drivers.sonars:Sonars",
+          "driver": "drivers.sonars:Sonars",
           "in": ["trigger"],
           "out": ["sonars", "pause"],
           "init": {
