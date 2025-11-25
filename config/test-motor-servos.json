@@ -3,14 +3,14 @@
   "robot": {
     "modules": {
       "app": {
-          "driver": "osgar.drivers.motor_servos:MotorServosSelftest",
+          "driver": "drivers.motor_servos:MotorServosSelftest",
           "in": [],
           "out": ["cmd"],
           "init": {
           }
         },
       "motor_servos": {
-          "driver": "osgar.drivers.motor_servos:MotorServos",
+          "driver": "drivers.motor_servos:MotorServos",
           "in": ["cmd"],
           "out": ["raw"],
           "init": {
