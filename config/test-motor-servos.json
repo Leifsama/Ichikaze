@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "robot": {
+    "modules": {
+      "app": {
+          "driver": "drivers.motor_servos:MotorServosSelftest",
+          "in": [],
+          "out": ["cmd"],
+          "init": {
+          }
+        },
+      "motor_servos": {
+          "driver": "drivers.motor_servos:MotorServos",
+          "in": ["cmd"],
+          "out": ["raw"],
+          "init": {
+          }
+       },
+      "serial": {
+          "driver": "serial",
+          "in": ["raw"],
+          "out": ["raw"],
+          "init": {
+            "port": "/dev/ttyACM1",
+            "speed": 115200
+          }
+      }
+    },
+    "links": [
+      ["app.cmd", "motor_servos.cmd"],
+      ["motor_servos.raw", "serial.raw"]
+    ]
+  }
+}
